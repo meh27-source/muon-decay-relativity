@@ -17,16 +17,12 @@ plt.grid(True)
 plt.show()
 
 # Notes
-#
+
 # Muons are unstable particles.
-#
 # Their decay follows an exponential law:
-#
 # N(t) = N0 * exp(-t/tau)
-#
 # N0  = initial number of muons
 # tau = mean lifetime
 # t   = time
-#
 # This model shows how the number of
 # surviving muons decreases over time.
