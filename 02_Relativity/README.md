@@ -1,65 +1,67 @@
 # Relativistic Muon Decay
 
-## Overview
+## Why I Added This Section
 
-This is the second stage of the Muon Decay and Special Relativity project.
+After creating the exponential decay model, I ran into an interesting problem.
 
-In the first section, muons were modeled using the standard exponential decay law.
+Muons only live for about 2.2 microseconds on average. Based on the first simulation, it seemed unlikely that many of them should survive long enough to travel from the upper atmosphere to Earth's surface.
 
-This section introduces Einstein's Special Theory of Relativity and investigates how time dilation affects the observed lifetime of fast-moving muons.
+However, experiments show that muons are detected at ground level all the time.
 
----
+This made me curious about what was missing from the simple decay model.
 
-## The Problem
-
-Muons have an average lifetime of only:
-
-**2.2 microseconds**
-
-Without relativistic effects, most muons should decay long before reaching Earth's surface.
-
-However, large numbers of muons are detected at ground level.
-
-This observation cannot be explained using classical physics alone.
+The answer turns out to be Einstein's Special Theory of Relativity.
 
 ---
 
-## Special Relativity
+## The Question
 
-According to Einstein's theory, time passes more slowly for objects moving close to the speed of light.
+If muons decay so quickly, why are so many of them still observed on Earth?
 
-The Lorentz factor is given by:
+To investigate this, I compared two situations:
+
+* Muon decay without relativistic effects
+* Muon decay with relativistic time dilation
+
+---
+
+## The Physics Behind It
+
+Many muons travel extremely close to the speed of light.
+
+According to Special Relativity, time passes more slowly for objects moving at very high speeds.
+
+This effect is known as **time dilation**.
+
+The amount of time dilation is determined by the Lorentz factor:
 
 γ = 1 / √(1 − v²/c²)
 
 where:
 
-* v = velocity of the muon
-* c = speed of light
+* v is the velocity of the muon
+* c is the speed of light
 
-The observed lifetime becomes:
+Using this factor, the observed lifetime becomes:
 
 τ' = γτ
 
-where:
-
-* τ = proper lifetime
-* τ' = dilated lifetime
+This means that from Earth's point of view, a fast-moving muon appears to live much longer than 2.2 microseconds.
 
 ---
 
-## Objective
+## What This Program Does
 
-The goal of this program is to compare:
+The program calculates:
 
-* Classical muon decay
-* Relativistic muon decay
+1. The normal exponential decay curve
+2. A second decay curve using the relativistically dilated lifetime
 
-and visualize the effect of time dilation.
+Both curves are displayed on the same graph so that the effect of time dilation can be seen directly.
 
 ---
 
-## Technologies Used
+## Tools Used
 
 * Python
 * NumPy
@@ -67,43 +69,31 @@ and visualize the effect of time dilation.
 
 ---
 
-## Concepts Used
-
-### Physics
-
-* Special Relativity
-* Time Dilation
-* Lorentz Factor
-
-### Mathematics
-
-* Exponential Functions
-* Scientific Computation
-
----
-
 ## Output
 
-The program generates a graph containing:
+The graph shows two different decay curves.
 
-* Classical decay curve
-* Relativistic decay curve
+The classical curve decreases rapidly, while the relativistic curve decreases much more slowly.
 
-The relativistic curve decreases more slowly because the muon's lifetime is increased by time dilation.
+Seeing both curves together makes it easy to understand how relativity changes the behaviour of fast-moving particles.
 
 ---
 
 ## What I Learned
 
-Through this project I learned:
+While working on this section, I learned:
 
-* How Special Relativity affects particle lifetimes
-* Why muons can reach Earth's surface
-* How to calculate the Lorentz factor
-* How time dilation changes physical observations
+* Why Special Relativity is necessary to explain real observations
+* How time dilation affects particle lifetimes
+* How the Lorentz factor is calculated
+* How a change in lifetime affects the decay curve
+
+One thing I found particularly interesting is that the underlying decay process remains the same. The only thing that changes is how time is measured.
 
 ---
 
-## Next Step (UPDATED LATER)
+## Looking Ahead (UPDATED LATER)
 
-The next section uses Monte Carlo simulation to model individual muon lifetimes using random sampling.
+So far, the project has used mathematical equations to describe the average behaviour of muons.
+
+In the next section, I will take a different approach by simulating thousands of individual muons and giving each one a random lifetime using a Monte Carlo simulation.

@@ -1,47 +1,49 @@
 # Exponential Decay of Muons
 
-## Overview
+## Why I Started This Project
 
-This is the first stage of the Muon Decay and Special Relativity project.
+I have always found it interesting that tiny particles created high in Earth's atmosphere can still be detected at ground level.
 
-The objective of this section is to model the decay of muons over time using Python and visualize the resulting exponential decay curve.
+While reading about muons, I learned that they only live for about 2.2 microseconds on average. That immediately raised a question for me:
+
+**If muons live for such a short time, how are so many of them able to survive long enough to reach Earth?**
+
+To start exploring that question, I first needed to understand how muons decay over time.
 
 ---
 
-## Physics Background
+## What This Program Does
 
-Muons are unstable elementary particles produced in the upper atmosphere when cosmic rays collide with atoms.
+In this first part of the project, I model the decay of muons using the exponential decay equation.
 
-A muon does not live forever. Instead, it decays after a short period of time.
+I start with 10,000 muons and calculate how many remain as time passes.
 
-The average lifetime of a muon is approximately:
+The result is displayed as a graph showing the decrease in the number of surviving muons.
+
+---
+
+## The Physics Behind It
+
+Muons are unstable particles, which means they naturally decay after a certain amount of time.
+
+Their average lifetime is:
 
 **2.2 microseconds (2.2 × 10⁻⁶ seconds)**
 
-The number of surviving muons decreases according to the exponential decay law:
+The number of surviving muons follows the exponential decay law:
 
 N(t) = N₀ × e^(-t/τ)
 
 where:
 
-* N(t) = number of surviving muons at time t
-* N₀ = initial number of muons
-* τ = mean lifetime of the muon
-* t = elapsed time
+* N(t) is the number of surviving muons
+* N₀ is the initial number of muons
+* τ is the average lifetime
+* t is the elapsed time
 
 ---
 
-## Objective
-
-The goal of this program is to:
-
-* Simulate the decay of 10,000 muons
-* Apply the exponential decay equation
-* Visualize how the number of surviving muons changes over time
-
----
-
-## Technologies Used
+## Tools Used
 
 * Python
 * NumPy
@@ -49,49 +51,39 @@ The goal of this program is to:
 
 ---
 
-## Mathematical Concepts
+## Program Settings
 
-This project uses:
-
-* Exponential functions
-* Scientific notation
-* Numerical computation
-* Data visualization
-
----
-
-## Program Parameters
-
-| Parameter           | Value            |
-| ------------------- | ---------------- |
-| Initial muons (N₀)  | 10,000           |
-| Muon lifetime (τ)   | 2.2 × 10⁻⁶ s     |
-| Simulation interval | 0 to 10 × 10⁻⁶ s |
+| Parameter               | Value            |
+| ----------------------- | ---------------- |
+| Initial number of muons | 10,000           |
+| Muon lifetime           | 2.2 × 10⁻⁶ s     |
+| Time interval           | 0 to 10 × 10⁻⁶ s |
 
 ---
 
 ## Output
 
-The program generates a graph showing:
+The program generates a graph showing how the number of surviving muons decreases over time.
 
-* Time on the x-axis
-* Number of surviving muons on the y-axis
-
-The curve decreases exponentially because more and more muons decay as time passes.
+As expected, the curve drops rapidly because more and more muons decay as time passes.
 
 ---
 
 ## What I Learned
 
-Through this project I learned:
+While working on this part of the project, I learned:
 
-* How exponential decay models particle lifetimes
-* How to perform scientific calculations using NumPy
-* How to create graphs using Matplotlib
-* How physical processes can be represented computationally
+* How exponential decay is used to model unstable particles
+* How to perform scientific calculations with NumPy
+* How to visualize physical processes using Matplotlib
+* How a simple mathematical equation can describe a real physical phenomenon
 
 ---
 
-## Next Step (UPDATED LATER)
+## Looking Ahead (UPDATED LATER)
 
-In the next section, Special Relativity will be introduced to investigate why many muons are still able to reach Earth's surface despite their short lifetime.
+This model assumes that muons are stationary.
+
+In reality, many muons travel at speeds very close to the speed of light.
+
+In the next section, I will explore how Einstein's Special Relativity changes the picture and helps explain why muons are still observed at Earth's surface.
